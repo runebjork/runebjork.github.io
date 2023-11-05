@@ -18,6 +18,41 @@
         <!-- Placeholder for WebGL Content -->
         <!-- <img src="images/placeholder.jpg" alt="WebGL Content" id="webgl-placeholder">-->
     </section>
+    <section id="welcome">
+        <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
+        <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
+        <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+        <script src="Build/OASIS_WebGL.loader.js"></script>
+        <script>
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+    
+            var canvas = document.querySelector("#unity-canvas");
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+            canvas.style.position = "fixed";
+    
+            document.body.style.textAlign = "left";
+          }
+    
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/OASIS_WebGL.data",
+            frameworkUrl: "Build/OASIS_WebGL.framework.js",
+            codeUrl: "Build/OASIS_WebGL.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Unity_SNS",
+            productVersion: "0.1",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+          });
+        </script>
+    </section>
+    
 
     <!-- Navigation Buttons -->
     <section id="navigation">
@@ -31,3 +66,7 @@
     <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
+
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+
+  </body>
