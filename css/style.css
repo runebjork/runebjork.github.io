@@ -1,0 +1,54 @@
+/* Import Aptos font from Google Fonts if available */
+@import url('https://fonts.googleapis.com/css2?family=Aptos&display=swap');
+
+/* Apply a universal box-sizing rule */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Apply the Aptos font to the whole body if available, otherwise fallback */
+body {
+    font-family: 'Aptos', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Style the welcome section */
+#welcome {
+    text-align: center;
+    padding: 20px;
+}
+
+#welcome h1 {
+    margin: 0;
+    color: #555;
+}
+
+#welcome img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for navigation buttons */
+#navigation {
+    text-align: center;
+    padding: 20px;
+}
+
+#navigation button {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#navigation button:hover {
+    background-color: #005f73;
+}
