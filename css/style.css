@@ -18,8 +18,8 @@ body {
 
 /* Style the welcome section */
 #welcome {
-    text-align: center;
     padding: 20px;
+    text-align: left; /* Align text to the left instead of center */
 }
 
 #welcome h1 {
@@ -97,20 +97,23 @@ section {
     display: flex;
     align-items: flex-start;
     background-color: #f0f0f0;
-    width: 960px;
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
+    max-width: 960px; /* Use max-width to allow the container to be responsive */
 }
 
 .profile-picture {
-    height: auto;
-    max-height: 100%; /* Ensure the image is never taller than the container */
-    max-width: 100%; /* Prevent the image from being too wide */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    height: 100%; /* Set the height to 100% of its parent */
+    width: auto; /* Adjust the width automatically */
     margin-right: 15px; /* Space between image and text */
 }
 
 .profile-text {
     flex-grow: 1;
+    text-align: left; /* Align text to the left */
     word-wrap: break-word;
 }
+
+
