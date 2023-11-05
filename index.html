@@ -15,21 +15,66 @@
             <br>Kompletterande kunskap inom realtidsvisualisering och informationshantering relaterat till detta.
             <br>Gästföreläsare vid Luleå Tekniska Universitet. Intresserad av matlagning, hantverk och friluftsliv.
             <br><b>Styrkor: </b>Nyfiken, snabblärd, bred kompetens, innovativ, mån om kunskapsspridning, lagspelare, anpassningsbar, vänlig och omtänksam</p>
-        <!-- Placeholder for WebGL Content -->
-        <!-- <img src="images/placeholder.jpg" alt="WebGL Content" id="webgl-placeholder">-->
     </section>
     <section id="welcome">
         <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
         <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
-        
-        <!-- Clickable placeholder image -->
         <img src="images/placeholder.jpg" alt="WebGL Content Placeholder" id="webgl-placeholder" style="width: 960px; height: 600px; cursor: pointer;" onclick="loadWebGL();">
-
-        <!-- Initially hidden WebGL canvas -->
         <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px; background: #231F20; display: none;"></canvas>
-    </section>
+        <script>
+            // Add this function to your existing script section
+            function loadWebGL() {
+              // Hide the placeholder image
+              var placeholder = document.getElementById('webgl-placeholder');
+              placeholder.style.display = 'none';
+              
+              // Show the WebGL canvas
+              var canvas = document.getElementById('unity-canvas');
+              canvas.style.display = 'block';
+              
+              // Load the Unity instance only after the canvas is displayed
+              createUnityInstance(canvas, {
+                dataUrl: "Build/OASIS_WebGL.data",
+                frameworkUrl: "Build/OASIS_WebGL.framework.js",
+                codeUrl: "Build/OASIS_WebGL.wasm",
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "DefaultCompany",
+                productName: "Unity_SNS",
+                productVersion: "0.1",
+                // ... other Unity loading options ...
+              });
+            }
+          </script>
+        <script src="Build/OASIS_WebGL.loader.js"></script>
+        <script>
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
     
-
+            var canvas = document.querySelector("#unity-canvas");
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+            canvas.style.position = "fixed";
+    
+            document.body.style.textAlign = "left";
+          }
+    
+          createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/OASIS_WebGL.data",
+            frameworkUrl: "Build/OASIS_WebGL.framework.js",
+            codeUrl: "Build/OASIS_WebGL.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Unity_SNS",
+            productVersion: "0.1",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+          });
+        </script>
+    </section>
     <!-- Navigation Buttons -->
     <section id="navigation">
         <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
@@ -38,63 +83,5 @@
         <button onclick="window.location.href='pages/personal.html';">Om mig</button>
         <button onclick="window.location.href='https://runebjork.github.io/';">Hem</button>
     </section>
-
-
-    <script>
-        // Add this function to your existing script section
-        function loadWebGL() {
-          // Hide the placeholder image
-          var placeholder = document.getElementById('webgl-placeholder');
-          placeholder.style.display = 'none';
-          
-          // Show the WebGL canvas
-          var canvas = document.getElementById('unity-canvas');
-          canvas.style.display = 'block';
-          
-          // Load the Unity instance only after the canvas is displayed
-          createUnityInstance(canvas, {
-            dataUrl: "Build/OASIS_WebGL.data",
-            frameworkUrl: "Build/OASIS_WebGL.framework.js",
-            codeUrl: "Build/OASIS_WebGL.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "Unity_SNS",
-            productVersion: "0.1",
-            // ... other Unity loading options ...
-          });
-        }
-        
-        // Your existing script for initializing the WebGL should remain unchanged.
-      </script>
-    
-    <script src="Build/OASIS_WebGL.loader.js"></script>
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
-
-        document.body.style.textAlign = "left";
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/OASIS_WebGL.data",
-        frameworkUrl: "Build/OASIS_WebGL.framework.js",
-        codeUrl: "Build/OASIS_WebGL.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Unity_SNS",
-        productVersion: "0.1",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
 </body>
 </html>
