@@ -68,3 +68,18 @@ body {
 #navigation button:hover {
     background-color: #005f73;
 }
+
+#webgl-placeholder,
+#unity-canvas {
+  width: 960px; 
+  height: 600px;
+  display: block; /* Use block to make them stack as you would expect */
+  margin: 0 auto; /* This centers the block elements if the parent has a defined width */
+  background: #231F20;
+}
+
+/* This ensures that the section container does not apply any unexpected padding or margin */
+section {
+  padding: 0;
+  margin: 0;
+}
