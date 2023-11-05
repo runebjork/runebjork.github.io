@@ -8,7 +8,7 @@
 
 /* Apply the Aptos font to the whole body if available, otherwise fallback */
 body {
-    font-family: 'Aptos', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -28,6 +28,22 @@ body {
 }
 
 #welcome img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the project section */
+#project {
+    text-align: center;
+    padding: 20px;
+}
+
+#project h1 {
+    margin: 0;
+    color: #555;
+}
+
+#project img {
     max-width: 100%;
     height: auto;
 }
