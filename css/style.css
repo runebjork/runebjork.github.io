@@ -83,3 +83,12 @@ section {
   padding: 0;
   margin: 0;
 }
+
+.introduction-box {
+    background-color: #f0f0f0; /* Light grey background */
+    width: 960px;
+    margin: 0 auto; /* Center the box */
+    padding: 15px; /* Add some padding inside the box */
+    box-sizing: border-box; /* Include padding in the width */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+}
