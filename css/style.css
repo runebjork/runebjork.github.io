@@ -92,3 +92,25 @@ section {
     box-sizing: border-box; /* Include padding in the width */
     word-wrap: break-word; /* Ensure long words do not overflow */
 }
+
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.profile-picture {
+    height: auto;
+    max-height: 100%; /* Ensure the image is never taller than the container */
+    max-width: 100%; /* Prevent the image from being too wide */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.profile-text {
+    flex-grow: 1;
+    word-wrap: break-word;
+}
