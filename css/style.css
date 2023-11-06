@@ -51,18 +51,18 @@ body {
 }
 
 #navigation button {
-    background-color: #008cba;
+    background-color: #2a2a2a;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
 }
 
 #navigation button:hover {
-    background-color: #005f73;
+    background-color: #606060;
 }
 
 #webgl-placeholder,
@@ -81,7 +81,7 @@ section {
 }
 
 .infobox {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #bfbfbf; /* Light grey background */
     width: 960px;
     margin: 0 auto; /* Center the box */
     padding: 15px; /* Add some padding inside the box */
@@ -92,7 +92,7 @@ section {
 .profile-container {
     display: flex;
     align-items: flex-start;
-    background-color: #f0f0f0;
+    background-color: #bfbfbf;
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
@@ -102,13 +102,13 @@ section {
 .profile-picture {
     flex-shrink: 0; /* Prevent the image from shrinking */
     height: auto; /* Height is auto to maintain aspect ratio */
-    width: 210px; /* Set the fixed width for the image */
+    width: 160px; /* Set the fixed width for the image */
     margin-right: 15px; /* Space between image and text */
 }
 
 .profile-text {
     flex-grow: 1;
-    max-width: 750px; /* Set the fixed width for the text */
+    max-width: 800px; /* Set the fixed width for the text */
     text-align: left; /* Align text to the left */
     word-wrap: break-word;
 }
