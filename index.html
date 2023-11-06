@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <section id="welcome">
     <h1><b>Daniel Runebjörk</b> | Portfölj</h1>
-    <div class="introduction-box">
+    <div class="infobox">
         <div class="profile-container">
-            <img src="images/headshot.jpg" alt="Daniel Runebjörk" class="profile-picture">
+          <img src="images/headshot.jpg" alt="Daniel Runebjörk" class="profile-picture">
             <div class="profile-text">
-          <p><b>Titel:</b> Civilingenjör Arkitektur – Civil Engineer M.Sc. Architecture</p>
-          <p><b>Introduktion:</b> Specialiserad inom bygghandlingsprojektering och utveckling av relaterad metodik. Erfarenhet av bostäder, kontor, skolor, vårdboenden, specialfastigheter. Kompletterande kunskap inom realtidsvisualisering och informationshantering relaterat till detta. Gästföreläsare vid Luleå Tekniska Universitet. Intresserad av matlagning, hantverk och friluftsliv.</p>
-          <p><b>Styrkor:</b> Nyfiken, snabblärd, bred kompetens, innovativ, mån om kunskapsspridning, lagspelare, anpassningsbar, vänlig och omtänksam</p>
+              <p><b>Titel:</b> Civilingenjör Arkitektur – Civil Engineer M.Sc. Architecture</p>
+              <p><b>Introduktion:</b> Specialiserad inom bygghandlingsprojektering och utveckling av relaterad metodik. Erfarenhet av bostäder, kontor, skolor, vårdboenden, specialfastigheter. Kompletterande kunskap inom realtidsvisualisering och informationshantering relaterat till detta. Gästföreläsare vid Luleå Tekniska Universitet. Intresserad av matlagning, hantverk och friluftsliv.</p>
+              <p><b>Styrkor:</b> Nyfiken, snabblärd, bred kompetens, innovativ, mån om kunskapsspridning, lagspelare, anpassningsbar, vänlig och omtänksam</p>
+            </div>
         </div>
-      </div>
-  </div>
-</section>
-<section id="realtime-visualization">
+    </div>
+  </section>
+
+<section id="welcome">
   <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
         <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
         <img src="images/placeholder.jpg" alt="WebGL Content Placeholder" id="webgl-placeholder" style="width: 960px; height: 600px; cursor: pointer;" onclick="loadWebGL();">
         <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px; background: #231F20; display: none;"></canvas>
         <script>
-            // Add this function to your existing script section
             function loadWebGL() {
               // Hide the placeholder image
               var placeholder = document.getElementById('webgl-placeholder');
@@ -45,7 +46,6 @@
                 companyName: "DefaultCompany",
                 productName: "Unity_SNS",
                 productVersion: "0.1",
-                // ... other Unity loading options ...
               });
             }
           </script>
@@ -84,7 +84,7 @@
         <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
         <button onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
         <button onclick="window.location.href='pages/projects.html';">Projekt</button>
-        <button onclick="window.location.href='pages/personal.html';">Om mig</button>
+        <!-- <button onclick="window.location.href='pages/personal.html';">Om mig</button> -->
         <button onclick="window.location.href='https://runebjork.github.io/';">Hem</button>
     </section>
 </body>
