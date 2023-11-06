@@ -10,7 +10,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f3f3f3;
 }
 
 #welcome {
@@ -56,7 +56,7 @@ body {
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -81,7 +81,7 @@ section {
 }
 
 .infobox {
-    background-color: #bfbfbf; /* Light grey background */
+    background-color: #e0e0e0; /* Light grey background */
     width: 960px;
     margin: 0 auto; /* Center the box */
     padding: 15px; /* Add some padding inside the box */
@@ -92,7 +92,7 @@ section {
 .profile-container {
     display: flex;
     align-items: flex-start;
-    background-color: #bfbfbf;
+    background-color: #e0e0e0;
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
@@ -102,13 +102,13 @@ section {
 .profile-picture {
     flex-shrink: 0; /* Prevent the image from shrinking */
     height: auto; /* Height is auto to maintain aspect ratio */
-    width: 160px; /* Set the fixed width for the image */
+    width: 180px; /* Set the fixed width for the image */
     margin-right: 15px; /* Space between image and text */
 }
 
 .profile-text {
     flex-grow: 1;
-    max-width: 800px; /* Set the fixed width for the text */
+    max-width: 780px; /* Set the fixed width for the text */
     text-align: left; /* Align text to the left */
     word-wrap: break-word;
 }
