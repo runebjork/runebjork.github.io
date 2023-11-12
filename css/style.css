@@ -113,4 +113,23 @@ section {
     word-wrap: break-word;
 }
 
+@media screen and (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .profile-picture {
+        width: 100%; /* Adjust width for mobile */
+        margin-bottom: 15px; /* Add space below the image */
+    }
+
+    .profile-text {
+        width: 100%; /* Adjust width for mobile */
+    }
+
+    .infobox {
+        width: 100%; /* Adjust box width for mobile */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

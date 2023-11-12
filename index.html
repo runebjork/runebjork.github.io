@@ -28,18 +28,24 @@
         <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
         <img src="images/placeholder.jpg" alt="WebGL Content Placeholder" id="webgl-placeholder" style="width: 960px; height: 600px; cursor: pointer;" onclick="loadWebGL();">
         <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px; background: #231F20; display: none;"></canvas>
+
         <script>
-            function loadWebGL() {
-              // Hide the placeholder image
-              var placeholder = document.getElementById('webgl-placeholder');
-              placeholder.style.display = 'none';
-              
-              // Show the WebGL canvas
-              var canvas = document.getElementById('unity-canvas');
-              canvas.style.display = 'block';
-              
-              // Load the Unity instance only after the canvas is displayed
-              createUnityInstance(canvas, {
+          function isMobileDevice() {
+              return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          }
+      
+          function loadWebGL() {
+              if (isMobileDevice()) {
+                  // Replace WebGL content with mobile placeholder
+                  document.getElementById('webgl-placeholder').src = 'images/placeholder_mobile.jpg';
+              } else {
+                  var placeholder = document.getElementById('webgl-placeholder');
+                  placeholder.style.display = 'none';
+      
+                  var canvas = document.getElementById('unity-canvas');
+                  canvas.style.display = 'block';
+      
+                  createUnityInstance(canvas, {
                 dataUrl: "Build/OASIS_WebGL.data",
                 frameworkUrl: "Build/OASIS_WebGL.framework.js",
                 codeUrl: "Build/OASIS_WebGL.wasm",
@@ -48,9 +54,15 @@
                 productName: "Unity_SNS",
                 productVersion: "0.1",
               });
-            }
-          </script>
+            } 
+          }
+
+        // Call loadWebGL on page load
+        window.onload = loadWebGL;
+        </script>
+
         <script src="Build/OASIS_WebGL.loader.js"></script>
+
         <script>
           if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             // Mobile device style: fill the whole browser client area with the game canvas:
@@ -79,13 +91,13 @@
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
           });
         </script>
+
     </section>
     <!-- Navigation Buttons -->
     <section id="navigation">
         <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
         <button onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
         <button onclick="window.location.href='pages/projects.html';">Projekt</button>
-        <!-- <button onclick="window.location.href='pages/personal.html';">Om mig</button> -->
         <button onclick="window.location.href='https://runebjork.github.io/';">Hem</button>
     </section>
 </body>
