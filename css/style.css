@@ -55,10 +55,18 @@ section {
 
 /* Style for navigation buttons */
 
+#navigation-container {
+    display: flex;
+    justify-content: center; /* Center the navigation div */
+    max-width: 960px; /* Max width same as the main content */
+    margin: 0 auto; /* Center the container */
+}
+
 #navigation {
     display: flex;           /* Use flexbox layout */
     justify-content: center; /* Center the buttons horizontally */
     flex-wrap: nowrap;       /* Prevent the buttons from wrapping */
+    width: 100%;
     padding: 20px;
     text-align: center;
 }
