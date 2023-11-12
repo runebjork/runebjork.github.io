@@ -27,25 +27,27 @@
   <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
         <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
         <img src="images/placeholder.jpg" alt="WebGL Content Placeholder" id="webgl-placeholder" style="width: 960px; height: 600px; cursor: pointer;" onclick="loadWebGL();">
-        <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px; background: #231F20; display: none;"></canvas>
+        <canvas id="unity-canvas" width="960" height="600" style="display: none;"></canvas>
 
         <script>
           function isMobileDevice() {
-              return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
           }
-      
+        
           function loadWebGL() {
-              if (isMobileDevice()) {
-                  // Replace WebGL content with mobile placeholder
-                  document.getElementById('webgl-placeholder').src = 'images/placeholder_mobile.jpg';
-              } else {
-                  var placeholder = document.getElementById('webgl-placeholder');
-                  placeholder.style.display = 'none';
-      
-                  var canvas = document.getElementById('unity-canvas');
-                  canvas.style.display = 'block';
-      
-                  createUnityInstance(canvas, {
+            // Check if the user is on a mobile device
+            if (isMobileDevice()) {
+              // If on a mobile device, swap out the placeholder for a mobile-specific image
+              document.getElementById('webgl-placeholder').src = 'images/placeholder_mobile.jpg';
+            } else {
+              // If not on a mobile device, then proceed to load WebGL content
+              var placeholder = document.getElementById('webgl-placeholder');
+              placeholder.style.display = 'none';
+        
+              var canvas = document.getElementById('unity-canvas');
+              canvas.style.display = 'block';
+        
+              createUnityInstance(canvas, {
                 dataUrl: "Build/OASIS_WebGL.data",
                 frameworkUrl: "Build/OASIS_WebGL.framework.js",
                 codeUrl: "Build/OASIS_WebGL.wasm",
@@ -54,12 +56,14 @@
                 productName: "Unity_SNS",
                 productVersion: "0.1",
               });
-            } 
-          }
+    }
+  }
 
-        // Call loadWebGL on page load
-        window.onload = loadWebGL;
-        </script>
+  // Only call loadWebGL if we're on a mobile device; otherwise, wait for a click
+  if (isMobileDevice()) {
+    window.onload = loadWebGL;
+  }
+</script>
 
         <script src="Build/OASIS_WebGL.loader.js"></script>
 
