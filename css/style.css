@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Apply a universal box-sizing rule */
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -12,6 +13,13 @@ body {
     color: #333;
     background-color: #f3f3f3;
 }
+
+section {
+    padding: 0;
+    margin: 0;
+  }
+
+/* Style of the welcome/header section*/
 
 #welcome {
     padding: 20px;
@@ -29,6 +37,7 @@ body {
 }
 
 /* Style the project section */
+
 #project {
     text-align: center;
     padding: 20px;
@@ -45,9 +54,13 @@ body {
 }
 
 /* Style for navigation buttons */
+
 #navigation {
-    text-align: center;
+    display: flex;           /* Use flexbox layout */
+    justify-content: center; /* Center the buttons horizontally */
+    flex-wrap: nowrap;       /* Prevent the buttons from wrapping */
     padding: 20px;
+    text-align: center;
 }
 
 #navigation button {
@@ -55,30 +68,18 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 5px;         /* Reduce the space between buttons if necessary */
     border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
+    flex: 1;               /* Allow the buttons to grow and fill the available space */
+    min-width: 0;          /* Override the default minimum width */
 }
-
 #navigation button:hover {
     background-color: #606060;
 }
 
-#webgl-placeholder,
-#unity-canvas {
-  width: 960px; 
-  height: 600px;
-  display: block; /* Use block to make them stack as you would expect */
-  margin: 0 auto; /* This centers the block elements if the parent has a defined width */
-  background: #231F20;
-}
-
-/* This ensures that the section container does not apply any unexpected padding or margin */
-section {
-  padding: 0;
-  margin: 0;
-}
+/* Style for infobox and profile */
 
 .infobox {
     background-color: #e0e0e0; /* Light grey background */
@@ -113,6 +114,24 @@ section {
     word-wrap: break-word;
 }
 
+/* Style for webgl container and placeholders */
+
+#webgl-placeholder,
+#unity-canvas {
+  width: 960px; 
+  height: 600px;
+  display: block; /* Use block to make them stack as you would expect */
+  margin: 0 auto; /* This centers the block elements if the parent has a defined width */
+  background: #231F20;
+}
+
+#webgl-placeholder {
+    max-width: 100%; /* Maximum width of the image is 100% of its container */
+    height: auto; /* Height is set to auto to maintain the aspect ratio */
+    display: block; /* Display block to remove any default margins */
+    margin: 0 auto; /* Center it horizontally if the container is wider */
+  }
+
 @media screen and (max-width: 600px) {
     .profile-container {
         flex-direction: column;
@@ -132,17 +151,11 @@ section {
         width: 100%; /* Adjust box width for mobile */
         padding: 10px; /* Adjust padding for smaller screens */
     }
-}
-
-#webgl-placeholder {
-    max-width: 100%; /* Maximum width of the image is 100% of its container */
-    height: auto; /* Height is set to auto to maintain the aspect ratio */
-    display: block; /* Display block to remove any default margins */
-    margin: 0 auto; /* Center it horizontally if the container is wider */
-  }
-
-@media screen and (max-width: 600px) {
-    #webgl-placeholder {
-      max-height: 300px; /* Adjust the max-height as needed for smaller screens */
+    #navigation button {
+        padding: 10px 10px; /* Reduce padding on smaller screens to save space */
+        font-size: 14px;    /* Optionally reduce the font size on smaller screens */
     }
-  }
+    #webgl-placeholder {
+        max-height: 300px; /* Adjust the max-height as needed for smaller screens */
+      }
+}
