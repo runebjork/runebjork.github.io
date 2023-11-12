@@ -133,3 +133,16 @@ section {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 }
+
+#webgl-placeholder {
+    max-width: 100%; /* Maximum width of the image is 100% of its container */
+    height: auto; /* Height is set to auto to maintain the aspect ratio */
+    display: block; /* Display block to remove any default margins */
+    margin: 0 auto; /* Center it horizontally if the container is wider */
+  }
+
+@media screen and (max-width: 600px) {
+    #webgl-placeholder {
+      max-height: 300px; /* Adjust the max-height as needed for smaller screens */
+    }
+  }
