@@ -26,7 +26,9 @@
 <section id="welcome">
   <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
         <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
-        <img src="images/placeholder.jpg" alt="WebGL Content Placeholder" id="webgl-placeholder" style="width: 960px; height: 600px; cursor: pointer;" onclick="loadWebGL();">
+        <div id="webgl-placeholder" onclick="loadWebGL();" style="cursor: pointer;">
+          <div class="placeholder-text"><b>Klicka här</b><br>ca 36 MB</div>
+        </div>
         <canvas id="unity-canvas" width="960" height="600" style="display: none;"></canvas>
 
         <script>
@@ -35,19 +37,20 @@
           }
         
           function loadWebGL() {
-            // Check if the user is on a mobile device
-            if (isMobileDevice()) {
-              // If on a mobile device, swap out the placeholder for a mobile-specific image
-              document.getElementById('webgl-placeholder').src = 'images/placeholder_mobile.jpg';
-            } else {
-              // If not on a mobile device, then proceed to load WebGL content
-              var placeholder = document.getElementById('webgl-placeholder');
-              placeholder.style.display = 'none';
-        
-              var canvas = document.getElementById('unity-canvas');
-              canvas.style.display = 'block';
-        
-              createUnityInstance(canvas, {
+              // Check if the user is on a mobile device
+              if (isMobileDevice()) {
+                // Show mobile placeholder and hide desktop placeholder
+                document.getElementById('webgl-placeholder').style.display = 'none';
+                document.getElementById('mobile-placeholder').style.display = 'flex';
+              } else {
+                // Hide the placeholder and load the WebGL content
+                var placeholder = document.getElementById('webgl-placeholder');
+                placeholder.style.display = 'none';
+
+                var canvas = document.getElementById('unity-canvas');
+                canvas.style.display = 'block';
+
+                createUnityInstance(canvas, {
                 dataUrl: "Build/OASIS_WebGL.data",
                 frameworkUrl: "Build/OASIS_WebGL.framework.js",
                 codeUrl: "Build/OASIS_WebGL.wasm",
@@ -103,7 +106,7 @@
         <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
         <button onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
         <button onclick="window.location.href='pages/projects.html';">Projekt</button>
-        <button onclick="window.location.href='https://runebjork.github.io/';">Hem</button>
+        <button onclick="window.location.href='index.html';">Hem</button>
       </div>
     </section>
 </body>

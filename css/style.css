@@ -124,21 +124,38 @@ section {
 
 /* Style for webgl container and placeholders */
 
-#webgl-placeholder,
-#unity-canvas {
-  width: 960px; 
-  height: 600px;
-  display: block; /* Use block to make them stack as you would expect */
-  margin: 0 auto; /* This centers the block elements if the parent has a defined width */
-  background: #231F20;
-}
+    #webgl-placeholder,
+    #unity-canvas {
+    width: 960px; 
+    height: 600px;
+    display: block; /* Use block to make them stack as you would expect */
+    margin: 0 auto; /* This centers the block elements if the parent has a defined width */
+    background: #231F20;
+    }
 
-#webgl-placeholder {
-    max-width: 100%; /* Maximum width of the image is 100% of its container */
-    height: auto; /* Height is set to auto to maintain the aspect ratio */
-    display: block; /* Display block to remove any default margins */
-    margin: 0 auto; /* Center it horizontally if the container is wider */
+    #webgl-placeholder {
+        max-width: 100%; /* Maximum width of the image is 100% of its container */
+        height: auto; /* Height is set to auto to maintain the aspect ratio */
+        display: block; /* Display block to remove any default margins */
+        margin: 0 auto; /* Center it horizontally if the container is wider */
+    }
+
+    #webgl-placeholder, #mobile-placeholder {
+        width: 960px;
+        height: 600px;
+        background-color: #2a2a2a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+  
+  .placeholder-text {
+    text-align: center;
+    color: white;
+    font-size: 20px; /* Adjust size as needed */
   }
+  
 
 @media screen and (max-width: 600px) {
     .profile-container {
