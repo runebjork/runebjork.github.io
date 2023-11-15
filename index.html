@@ -1,113 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Runebjörk | Portfölj</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Runebjörk | Portfölj</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <section id="welcome">
     <h1><b>Daniel Runebjörk</b> | Portfölj</h1>
     <br>
     <div class="infobox">
-        <div class="profile-container">
-          <img src="images/headshot.jpg" alt="Daniel Runebjörk" class="profile-picture">
-            <div class="profile-text">
-              <p><b>Titel:</b> Civilingenjör Arkitektur – Civil Engineer M.Sc. Architecture</p>
-              <p><b>Introduktion:</b> Specialiserad inom bygghandlingsprojektering och utveckling av relaterad metodik. Erfarenhet av bostäder, kontor, skolor, vårdboenden, specialfastigheter. Kompletterande kunskap inom realtidsvisualisering och informationshantering relaterat till detta. Gästföreläsare vid Luleå Tekniska Universitet. Intresserad av matlagning, hantverk och friluftsliv.</p>
-              <p><b>Styrkor:</b> Nyfiken, snabblärd, bred kompetens, innovativ, mån om kunskapsspridning, lagspelare, anpassningsbar, vänlig och omtänksam</p>
-            </div>
+      <div class="profile-container">
+        <img src="images/headshot.jpg" alt="Daniel Runebjörk" class="profile-picture">
+        <div class="profile-text">
+          <p><b>Titel:</b> Civilingenjör Arkitektur – Civil Engineer M.Sc. Architecture</p>
+          <p><b>Introduktion:</b> Specialiserad inom bygghandlingsprojektering och utveckling av relaterad metodik.
+            Erfarenhet av bostäder, kontor, skolor, vårdboenden, specialfastigheter. Kompletterande kunskap inom
+            realtidsvisualisering och informationshantering relaterat till detta. Gästföreläsare vid Luleå Tekniska
+            Universitet. Intresserad av matlagning, hantverk och friluftsliv.</p>
+          <p><b>Styrkor:</b> Nyfiken, snabblärd, bred kompetens, innovativ, mån om kunskapsspridning, lagspelare,
+            anpassningsbar, vänlig och omtänksam</p>
         </div>
+      </div>
     </div>
   </section>
 
-<section id="welcome">
-  <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell OASIS</h1>
-        <p><b>Instruktioner: </b>Klicka på fönstret nedan</p>
-        <div id="webgl-placeholder" onclick="loadWebGL();" style="cursor: pointer;">
-          <div class="placeholder-text"><b>Klicka här</b><br>ca 36 MB</div>
-        </div>
-        <canvas id="unity-canvas" width="960" height="600" style="display: none;"></canvas>
+  <section id="welcome">
+    <h1><b>Exempel på realtidsvisualisering</b> | Klimatmodell</h1>
+    <p><b>Instruktioner: </b>Klicka på fönstret nedan.\nAnvänd höger musknapp för att rotera modellen.\nAnvänd vänster
+      musknapp för att interagera med menyknappar.</p>
+    <div id="desktop-placeholder" onclick="loadWebGL();" style="cursor: pointer;">
+      <div class="placeholder-text"><b>Klicka här</b><br>ca 36 MB</div>
+    </div>
+    <div id="mobile-placeholder">
+      <div class="placeholder-text"><b>Öppna i desktop-<br>webbläsare för att<br>se innehåll</div>
+    </div>
+    <canvas id="unity-canvas" width="960" height="600" style="display: none;"></canvas>
+    <script src="js/webglloader.js"></script>
+    <script src="Build/OASIS_WebGL.loader.js"></script>
 
-        <script>
-          function isMobileDevice() {
-            return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          }
-        
-          function loadWebGL() {
-              // Check if the user is on a mobile device
-              if (isMobileDevice()) {
-                // Show mobile placeholder and hide desktop placeholder
-                document.getElementById('webgl-placeholder').style.display = 'none';
-                document.getElementById('mobile-placeholder').style.display = 'flex';
-              } else {
-                // Hide the placeholder and load the WebGL content
-                var placeholder = document.getElementById('webgl-placeholder');
-                placeholder.style.display = 'none';
+  </section>
 
-                var canvas = document.getElementById('unity-canvas');
-                canvas.style.display = 'block';
-
-                createUnityInstance(canvas, {
-                dataUrl: "Build/OASIS_WebGL.data",
-                frameworkUrl: "Build/OASIS_WebGL.framework.js",
-                codeUrl: "Build/OASIS_WebGL.wasm",
-                streamingAssetsUrl: "StreamingAssets",
-                companyName: "DefaultCompany",
-                productName: "Unity_SNS",
-                productVersion: "0.1",
-              });
-    }
-  }
-
-  // Only call loadWebGL if we're on a mobile device; otherwise, wait for a click
-  if (isMobileDevice()) {
-    window.onload = loadWebGL;
-  }
-</script>
-
-        <script src="Build/OASIS_WebGL.loader.js"></script>
-
-        <script>
-          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            // Mobile device style: fill the whole browser client area with the game canvas:
-            var meta = document.createElement('meta');
-            meta.name = 'viewport';
-            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-            document.getElementsByTagName('head')[0].appendChild(meta);
-    
-            var canvas = document.querySelector("#unity-canvas");
-            canvas.style.width = "100%";
-            canvas.style.height = "100%";
-            canvas.style.position = "fixed";
-    
-            document.body.style.textAlign = "left";
-          }
-    
-          createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "Build/OASIS_WebGL.data",
-            frameworkUrl: "Build/OASIS_WebGL.framework.js",
-            codeUrl: "Build/OASIS_WebGL.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "Unity_SNS",
-            productVersion: "0.1",
-            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-          });
-        </script>
-
-</section>
-    <!-- Navigation Buttons -->
-    <section id="navigation-container">
-      <div id="navigation">
-        <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
-        <button onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
-        <button onclick="window.location.href='pages/projects.html';">Projekt</button>
-        <button onclick="window.location.href='index.html';">Hem</button>
-      </div>
-    </section>
+  <section id="navigation-container">
+    <div id="navigation">
+      <button onclick="window.open('pages/cv.html', '_blank');">CV</button>
+      <button
+        onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
+      <button onclick="window.location.href='pages/projects.html';">Projekt</button>
+      <button onclick="window.location.href='index.html';">Hem</button>
+    </div>
+  </section>
 </body>
+
 </html>

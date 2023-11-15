@@ -2,9 +2,12 @@
 
 /* Apply a universal box-sizing rule */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -17,7 +20,7 @@ body {
 section {
     padding: 0;
     margin: 0;
-  }
+}
 
 /* Style of the welcome/header section*/
 
@@ -57,15 +60,21 @@ section {
 
 #navigation-container {
     display: flex;
-    justify-content: center; /* Center the navigation div */
-    max-width: 960px; /* Max width same as the main content */
-    margin: 0 auto; /* Center the container */
+    justify-content: center;
+    /* Center the navigation div */
+    max-width: 960px;
+    /* Max width same as the main content */
+    margin: 0 auto;
+    /* Center the container */
 }
 
 #navigation {
-    display: flex;           /* Use flexbox layout */
-    justify-content: center; /* Center the buttons horizontally */
-    flex-wrap: nowrap;       /* Prevent the buttons from wrapping */
+    display: flex;
+    /* Use flexbox layout */
+    justify-content: center;
+    /* Center the buttons horizontally */
+    flex-wrap: nowrap;
+    /* Prevent the buttons from wrapping */
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -76,13 +85,17 @@ section {
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 5px;         /* Reduce the space between buttons if necessary */
+    margin: 0 5px;
+    /* Reduce the space between buttons if necessary */
     border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
-    flex: 1;               /* Allow the buttons to grow and fill the available space */
-    min-width: 0;          /* Override the default minimum width */
+    flex: 1;
+    /* Allow the buttons to grow and fill the available space */
+    min-width: 0;
+    /* Override the default minimum width */
 }
+
 #navigation button:hover {
     background-color: #606060;
 }
@@ -90,12 +103,17 @@ section {
 /* Style for infobox and profile */
 
 .infobox {
-    background-color: #e0e0e0; /* Light grey background */
+    background-color: #e0e0e0;
+    /* Light grey background */
     width: 960px;
-    margin: 0 auto; /* Center the box */
-    padding: 15px; /* Add some padding inside the box */
-    box-sizing: border-box; /* Include padding in the width */
-    word-wrap: break-word; /* Ensure long words do not overflow */
+    margin: 0 auto;
+    /* Center the box */
+    padding: 15px;
+    /* Add some padding inside the box */
+    box-sizing: border-box;
+    /* Include padding in the width */
+    word-wrap: break-word;
+    /* Ensure long words do not overflow */
 }
 
 .profile-container {
@@ -105,52 +123,68 @@ section {
     margin: 0 auto;
     padding: 15px;
     box-sizing: border-box;
-    max-width: 960px; /* Keep the max-width to constrain the container */
+    max-width: 960px;
+    /* Keep the max-width to constrain the container */
 }
 
 .profile-picture {
-    flex-shrink: 0; /* Prevent the image from shrinking */
-    height: auto; /* Height is auto to maintain aspect ratio */
-    width: 180px; /* Set the fixed width for the image */
-    margin-right: 15px; /* Space between image and text */
+    flex-shrink: 0;
+    /* Prevent the image from shrinking */
+    height: auto;
+    /* Height is auto to maintain aspect ratio */
+    width: 180px;
+    /* Set the fixed width for the image */
+    margin-right: 15px;
+    /* Space between image and text */
 }
 
 .profile-text {
     flex-grow: 1;
-    max-width: 780px; /* Set the fixed width for the text */
-    text-align: left; /* Align text to the left */
+    max-width: 780px;
+    /* Set the fixed width for the text */
+    text-align: left;
+    /* Align text to the left */
     word-wrap: break-word;
 }
 
 /* Style for webgl container and placeholders */
 
-/* Common styles for webgl-placeholder and unity-canvas */
-#webgl-placeholder,
+/* Common styles for desktop-placeholder and unity-canvas */
+#desktop-placeholder,
 #unity-canvas {
-  width: 960px; 
-  height: 600px;
-  margin: 0 auto; /* Center it horizontally */
-  background-color: #2a2a2a; /* Dark background for placeholder */
-  display: none; /* Initially hide both elements */
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    /* Center it horizontally */
+    background-color: #2a2a2a;
+    /* Dark background for placeholder */
+    display: none;
+    /* Initially hide both elements */
 }
 
-/* Additional styles specifically for webgl-placeholder */
-#webgl-placeholder {
-  display: flex; /* Use flexbox to center content */
-  justify-content: center; /* Center horizontally within the flex container */
-  align-items: center; /* Center vertically within the flex container */
+/* Additional styles specifically for desktop-placeholder */
+#desktop-placeholder {
+    display: flex;
+    /* Use flexbox to center content */
+    justify-content: center;
+    /* Center horizontally within the flex container */
+    align-items: center;
+    /* Center vertically within the flex container */
 }
 
 .placeholder-text {
-  text-align: center;
-  color: white;
-  font-size: 20px; /* Adjust font size as needed */
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    /* Adjust font size as needed */
 }
 
 /* Styles for unity-canvas when it is displayed */
 #unity-canvas {
-  background-color: #231F20; /* Specific background color for unity canvas */
-  display: none; /* Initially hide the canvas until WebGL is loaded */
+    background-color: #231F20;
+    /* Specific background color for unity canvas */
+    display: none;
+    /* Initially hide the canvas until WebGL is loaded */
 }
 
 @media screen and (max-width: 600px) {
@@ -160,23 +194,33 @@ section {
     }
 
     .profile-picture {
-        width: 100%; /* Adjust width for mobile */
-        margin-bottom: 15px; /* Add space below the image */
+        width: 100%;
+        /* Adjust width for mobile */
+        margin-bottom: 15px;
+        /* Add space below the image */
     }
 
     .profile-text {
-        width: 100%; /* Adjust width for mobile */
+        width: 100%;
+        /* Adjust width for mobile */
     }
 
     .infobox {
-        width: 100%; /* Adjust box width for mobile */
-        padding: 10px; /* Adjust padding for smaller screens */
+        width: 100%;
+        /* Adjust box width for mobile */
+        padding: 10px;
+        /* Adjust padding for smaller screens */
     }
+
     #navigation button {
-        padding: 10px 10px; /* Reduce padding on smaller screens to save space */
-        font-size: 14px;    /* Optionally reduce the font size on smaller screens */
+        padding: 10px 10px;
+        /* Reduce padding on smaller screens to save space */
+        font-size: 14px;
+        /* Optionally reduce the font size on smaller screens */
     }
-    #webgl-placeholder {
-        max-height: 300px; /* Adjust the max-height as needed for smaller screens */
-      }
+
+    #desktop-placeholder {
+        max-height: 300px;
+        /* Adjust the max-height as needed for smaller screens */
+    }
 }
