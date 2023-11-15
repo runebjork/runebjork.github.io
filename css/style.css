@@ -22,39 +22,65 @@ section {
     margin: 0;
 }
 
-/* Style of the welcome/header section*/
+/* Style of the main header */
 
-#welcome {
+.main-header {
+    padding: 20;
+    margin: 0;
+    text-align: center;
+    color:#555;
+}
+
+/* Style the profile section */
+
+#profile-section {
     padding: 20px;
     text-align: center;
 }
 
-#welcome h1 {
+#profile-section h1 {
     margin: 0;
     color: #555;
 }
 
-#welcome img {
-    max-width: 100%;
-    height: auto;
+/* Style the visulization section */
+
+#visualization-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#visualization-section h1 {
+    margin: 0;
+    color: #555;
 }
 
 /* Style the project section */
 
-#project {
+#project-section {
     text-align: center;
     padding: 20px;
 }
 
-#project h1 {
+#project-section h1 {
     margin: 0;
     color: #555;
 }
 
-#project img {
-    max-width: 100%;
-    height: auto;
+.project-info-box {
+    background-color: #e0e0e0;
+    /* Light grey background */
+    width: 960px;
+    margin: 0 auto;
+    /* Center the box */
+    padding: 15px;
+    /* Add some padding inside the box */
+    box-sizing: border-box;
+    /* Include padding in the width */
+    word-wrap: break-word;
+    /* Ensure long words do not overflow */
 }
+
 
 /* Style for navigation buttons */
 
@@ -102,7 +128,7 @@ section {
 
 /* Style for infobox and profile */
 
-.infobox {
+.profile-info-box {
     background-color: #e0e0e0;
     /* Light grey background */
     width: 960px;
