@@ -151,6 +151,7 @@ section {
 
 /* Common styles for desktop-placeholder and unity-canvas */
 #desktop-placeholder,
+#mobile-placeholder,
 #unity-canvas {
     width: 960px;
     height: 600px;
@@ -163,7 +164,8 @@ section {
 }
 
 /* Additional styles specifically for desktop-placeholder */
-#desktop-placeholder {
+#desktop-placeholder,
+#mobile-placeholder {
     display: flex;
     /* Use flexbox to center content */
     justify-content: center;
