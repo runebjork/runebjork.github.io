@@ -190,8 +190,7 @@ section {
 }
 
 /* Additional styles specifically for desktop-placeholder */
-#desktop-placeholder,
-#mobile-placeholder {
+#desktop-placeholder{
     display: flex;
     /* Use flexbox to center content */
     justify-content: center;
@@ -208,7 +207,8 @@ section {
 }
 
 /* Styles for unity-canvas when it is displayed */
-#unity-canvas {
+#unity-canvas,
+#mobile-placeholder {
     background-color: #231F20;
     /* Specific background color for unity canvas */
     display: none;
