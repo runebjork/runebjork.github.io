@@ -178,12 +178,14 @@ section {
 #desktop-placeholder,
 #mobile-placeholder,
 #unity-canvas {
-    max-width: 960px;
-    width: 100%;
-    height: auto;
+    width: 960px;
+    height: 600px;
     margin: 0 auto;
+    /* Center it horizontally */
     background-color: #2a2a2a;
+    /* Dark background for placeholder */
     display: none;
+    /* Initially hide both elements */
 }
 
 /* Additional styles specifically for desktop-placeholder */
@@ -215,15 +217,11 @@ section {
 @media screen and (max-width: 600px) {
     .profile-container,
     .project-info-box,
-    .profile-info-box
-    #desktop-placeholder,
-    #mobile-placeholder,
-    #unity-canvas {
+    .profile-info-box {
         flex-direction: column;
         align-items: center;
         width: 100%;
         padding: 10px;
-        max-height: 300px;
     }
 
     .profile-picture {
