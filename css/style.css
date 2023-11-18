@@ -73,16 +73,11 @@ section {
 
 .project-info-box {
     background-color: #e0e0e0;
-    /* Light grey background */
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
-    /* Center the box */
     padding: 15px;
-    /* Add some padding inside the box */
     box-sizing: border-box;
-    /* Include padding in the width */
     word-wrap: break-word;
-    /* Ensure long words do not overflow */
 }
 
 
@@ -254,5 +249,10 @@ section {
     #desktop-placeholder {
         max-height: 300px;
         /* Adjust the max-height as needed for smaller screens */
+    }
+
+    .project-info-box {
+        width: 100%;
+        padding: 10px;
     }
 }
