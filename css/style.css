@@ -215,44 +215,30 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-    .profile-container {
+    .profile-container,
+    .project-info-box,
+    .profile-info-box {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 10px;
     }
 
     .profile-picture {
         width: 100%;
-        /* Adjust width for mobile */
         margin-bottom: 15px;
-        /* Add space below the image */
     }
 
     .profile-text {
         width: 100%;
-        /* Adjust width for mobile */
-    }
-
-    .infobox {
-        width: 100%;
-        /* Adjust box width for mobile */
-        padding: 10px;
-        /* Adjust padding for smaller screens */
     }
 
     #navigation button {
         padding: 10px 10px;
-        /* Reduce padding on smaller screens to save space */
         font-size: 14px;
-        /* Optionally reduce the font size on smaller screens */
     }
 
     #desktop-placeholder {
         max-height: 300px;
-        /* Adjust the max-height as needed for smaller screens */
-    }
-
-    .project-info-box {
-        width: 100%;
-        padding: 10px;
     }
 }
