@@ -209,7 +209,8 @@ section {
 @media screen and (max-width: 600px) {
     .profile-container,
     .project-info-box,
-    .profile-info-box {
+    .profile-info-box,
+    #mobile-placeholder {
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -219,6 +220,7 @@ section {
     .profile-picture {
         width: 100%;
         margin-bottom: 15px;
+        padding: 15;
     }
 
     .profile-text {
