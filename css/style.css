@@ -193,12 +193,11 @@ section {
     justify-content: center;
     align-items: center;
 }
-
+*/
 #unity-canvas,
 #mobile-placeholder {
     display: none;
 } 
-*/
 
 .placeholder-text {
     text-align: center;
