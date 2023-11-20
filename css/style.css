@@ -178,13 +178,14 @@ section {
 #desktop-placeholder,
 #mobile-placeholder,
 #unity-canvas {
-    width: 960px;
-    height: 600px;
+    max-width: 960px;
+    padding-top: 62.5%;
     margin: 0 auto;
     background-color: #2a2a2a;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /*
