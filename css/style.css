@@ -181,37 +181,30 @@ section {
     width: 960px;
     height: 600px;
     margin: 0 auto;
-    /* Center it horizontally */
     background-color: #2a2a2a;
-    /* Dark background for placeholder */
-    display: none;
-    /* Initially hide both elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Additional styles specifically for desktop-placeholder */
+/*
 #desktop-placeholder{
     display: flex;
-    /* Use flexbox to center content */
     justify-content: center;
-    /* Center horizontally within the flex container */
     align-items: center;
-    /* Center vertically within the flex container */
 }
+
+#unity-canvas,
+#mobile-placeholder {
+    display: none;
+} 
+*/
 
 .placeholder-text {
     text-align: center;
     color: white;
     font-size: 20px;
     /* Adjust font size as needed */
-}
-
-/* Styles for unity-canvas when it is displayed */
-#unity-canvas,
-#mobile-placeholder {
-    background-color: #231F20;
-    /* Specific background color for unity canvas */
-    display: none;
-    /* Initially hide the canvas until WebGL is loaded */
 }
 
 @media screen and (max-width: 600px) {
@@ -221,7 +214,7 @@ section {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 10px;
+        padding: 20px;
     }
 
     .profile-picture {
