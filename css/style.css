@@ -166,9 +166,7 @@ section {
 .profile-text {
     flex-grow: 1;
     max-width: 780px;
-    /* Set the fixed width for the text */
     text-align: left;
-    /* Align text to the left */
     word-wrap: break-word;
 }
 
@@ -187,13 +185,6 @@ section {
     align-items: center;
 }
 
-/*
-#desktop-placeholder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
 #unity-canvas,
 #mobile-placeholder {
     display: none;
@@ -203,7 +194,6 @@ section {
     text-align: center;
     color: white;
     font-size: 20px;
-    /* Adjust font size as needed */
 }
 
 @media screen and (max-width: 600px) {
@@ -219,7 +209,7 @@ section {
     }
 
     .profile-picture {
-        width: 80%;
+        width: 100%;
         margin: 0 auto 10px;
         padding: 15;
     }
