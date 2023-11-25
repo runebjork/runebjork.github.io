@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectId = urlParams.get('project');
   
     // Fetch the project details from the JSON file
-    fetch('../projects.json')
+    fetch('projects.json')
       .then(response => response.json())
       .then(projects => {
         const project = projects.find(p => p.id === projectId);
