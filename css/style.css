@@ -85,6 +85,20 @@ section {
     word-wrap: break-word;
 }
 
+#project-header-box {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#project-header-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 /* Style for navigation buttons */
 
@@ -110,14 +124,14 @@ section {
     text-align: center;
 }
 
-#navigation button {
+#navigation a {
     background-color: #2a2a2a;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 0 5px;
     /* Reduce the space between buttons if necessary */
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
     flex: 1;
@@ -126,7 +140,7 @@ section {
     /* Override the default minimum width */
 }
 
-#navigation button:hover {
+#navigation a:hover {
     background-color: #606060;
 }
 
@@ -223,7 +237,7 @@ section {
         width: 100%;
     }
 
-    #navigation button {
+    #navigation a {
         padding: 10px 10px;
         font-size: 14px;
     }

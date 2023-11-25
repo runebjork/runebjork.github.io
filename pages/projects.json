@@ -5,7 +5,8 @@
       "year": "2023 - nu",
       "role": "Modellansvarig, medarbetare",
       "info": "Nybyggnation av stadskvarter, multifunktion. Systemhandling.",
-      "tags": ["Multifunktion", "Bostäder"]
+      "tags": ["Multifunktion", "Bostäder"],
+      "header_image": "../images/HeaderP6.jpg"
     },
     {
         "id": "project2",
@@ -13,7 +14,8 @@
         "year": "2023",
         "role": "Lärare, gästföreläsare",
         "info": "Föreläsning och pedagogiskt arbete",
-        "tags": ["Utbildning"]
+        "tags": ["Utbildning"],
+        "header_image": "../images/HeaderP6.jpg"
       },
       {
         "id": "project3",
@@ -21,7 +23,8 @@
         "year": "2022-2023",
         "role": "Modellansvarig, medarbetare",
         "info": "Nybyggnation av flerbostadshus. System- och bygghandling",
-        "tags": ["Bostäder"]
+        "tags": ["Bostäder"],
+        "header_image": "../images/HeaderP6.jpg"
       },
       {
         "id": "project4",
@@ -29,7 +32,8 @@
         "year": "2022",
         "role": "Modellansvarig, medarbetare",
         "info": "Påbyggnad av befintlig byggnad med skola och kontorslokaler. Bygghandling.",
-        "tags": ["Skola", "Kontor"]
+        "tags": ["Skola", "Kontor"],
+        "header_image": "../images/HeaderP6.jpg"
       },
       {
         "id": "project5",
@@ -37,7 +41,8 @@
         "year": "2021",
         "role": "Handläggare",
         "info": "Projektering av bygghandlingar för ombyggnad av kontorslokaler",
-        "tags": ["Kontor", "Offentligt"]
+        "tags": ["Kontor", "Offentligt"],
+        "header_image": "../images/HeaderP6.jpg"
       },
       {
         "id": "project6",
@@ -45,7 +50,8 @@
         "year": "2021",
         "role": "Handläggare",
         "info": "Konceptskisser till upprättande av förfrågningsunderlag för vård- och omsorgsboende.",
-        "tags": ["Vård", "Säkerhet", "Specialfastigheter"]
+        "tags": ["Vård", "Säkerhet", "Specialfastigheter"],
+        "header_image": "../images/HeaderP6.jpg"
       },
       {
         "id": "project7",
@@ -53,7 +59,8 @@
         "year": "2021",
         "role": "Handläggare",
         "info": "Projektering av bygghandlingar för ombyggnad av Riksarkivets mediakonverteringscenter.",
-        "tags": ["Arkiv", "Säkerhet", "Specialfastigheter"]
+        "tags": ["Arkiv", "Säkerhet", "Specialfastigheter"],
+        "header_image": "../images/HeaderP6.jpg"
       }
   ]
   

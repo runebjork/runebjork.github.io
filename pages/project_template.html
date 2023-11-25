@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-  <header class="main-header"> <h1 id="project-title">Project Title</h1></header>
+  <div id="project-header-box">
+    <div id="project-header"></div>
+    <header class="main-header"> <h1 id="project-title">Project Title</h1></header>
+  </div>
 
     <section class="project-details">
         <p><b>År:</b> <span id="project-year"></span></p>
@@ -18,12 +20,12 @@
     </section>
 
     <section id="navigation-container">
-        <div id="navigation">
-          <button onclick="window.open('cv.html', '_blank');">CV</button>
-          <button onclick="window.open('https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/', '_blank');">LinkedIn</button>
-          <button onclick="window.location.href='projects.html';">Projekt</button>
-          <button onclick="window.location.href='../index.html';">Hem</button>
-        </div>
+      <div id="navigation">
+        <a href="cv.html" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/", target="_blank">LinkedIn</a>
+        <a href="projects.html">Projekt</a>
+        <a href="../index.html">Hem</a>
+      </div>
     </section>
 
     <script src="../js/project_loader.js"></script>

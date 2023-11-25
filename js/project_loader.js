@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Extract project ID from URL query string
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('project');
+    
   
     // Fetch the project details from the JSON file
     fetch('projects.json')
@@ -16,10 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('project-role').textContent = project.role;
           document.getElementById('project-info').textContent = project.info;
           document.getElementById('project-tags').textContent = project.tags.join(', ');
+          const img = document.createElement("img");
+          img.src = project.header_image;
+          document.getElementById('project-header').appendChild(img);
         } else {
           // Handle case where project is not found
           console.error('Project not found');
         }
       });
   });
-  
