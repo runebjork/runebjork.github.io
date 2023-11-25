@@ -1,0 +1,59 @@
+[
+    {
+      "id": "project1",
+      "project_name": "Kvarnstugan, Sundbyberg",
+      "year": "2023 - nu",
+      "role": "Modellansvarig, medarbetare",
+      "info": "Nybyggnation av stadskvarter, multifunktion. Systemhandling.",
+      "tags": ["Multifunktion", "Bostäder"]
+    },
+    {
+        "id": "project2",
+        "project_name": "Gästföreläsare CAD-VR, Luleå Tekniska Universitet",
+        "year": "2023",
+        "role": "Lärare, gästföreläsare",
+        "info": "Föreläsning och pedagogiskt arbete",
+        "tags": ["Utbildning"]
+      },
+      {
+        "id": "project3",
+        "project_name": "Inre Hamnen G2, Inre Hamnen L2",
+        "year": "2022-2023",
+        "role": "Modellansvarig, medarbetare",
+        "info": "Nybyggnation av flerbostadshus. System- och bygghandling",
+        "tags": ["Bostäder"]
+      },
+      {
+        "id": "project4",
+        "project_name": "Hus 67 och 68, Nacka Strand",
+        "year": "2022",
+        "role": "Modellansvarig, medarbetare",
+        "info": "Påbyggnad av befintlig byggnad med skola och kontorslokaler. Bygghandling.",
+        "tags": ["Skola", "Kontor"]
+      },
+      {
+        "id": "project5",
+        "project_name": "Regionens Hus, Härnösand",
+        "year": "2021",
+        "role": "Handläggare",
+        "info": "Projektering av bygghandlingar för ombyggnad av kontorslokaler",
+        "tags": ["Kontor", "Offentligt"]
+      },
+      {
+        "id": "project6",
+        "project_name": "Vård- och omsorgsboende, Saltvik",
+        "year": "2021",
+        "role": "Handläggare",
+        "info": "Konceptskisser till upprättande av förfrågningsunderlag för vård- och omsorgsboende.",
+        "tags": ["Vård", "Säkerhet", "Specialfastigheter"]
+      },
+      {
+        "id": "project7",
+        "project_name": "Riksarkivet MKC, Fränsta",
+        "year": "2021",
+        "role": "Handläggare",
+        "info": "Projektering av bygghandlingar för ombyggnad av Riksarkivets mediakonverteringscenter.",
+        "tags": ["Arkiv", "Säkerhet", "Specialfastigheter"]
+      }
+  ]
+  

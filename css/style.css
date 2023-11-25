@@ -76,6 +76,15 @@ section {
     word-wrap: break-word;
 }
 
+.project-details {
+    background-color: #e0e0e0;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
 
 /* Style for navigation buttons */
 
