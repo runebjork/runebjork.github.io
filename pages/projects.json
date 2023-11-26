@@ -6,7 +6,7 @@
       "role": "Modellansvarig, medarbetare",
       "info": "Nybyggnation av stadskvarter, multifunktion. Systemhandling.",
       "tags": ["Multifunktion", "Bostäder"],
-      "header_image": "../images/HeaderP6.jpg"
+      "header_image": "../images/HeaderP1.jpg"
     },
     {
         "id": "project2",
@@ -15,7 +15,7 @@
         "role": "Lärare, gästföreläsare",
         "info": "Föreläsning och pedagogiskt arbete",
         "tags": ["Utbildning"],
-        "header_image": "../images/HeaderP6.jpg"
+        "header_image": "../images/HeaderP2.jpg"
       },
       {
         "id": "project3",
@@ -24,7 +24,7 @@
         "role": "Modellansvarig, medarbetare",
         "info": "Nybyggnation av flerbostadshus. System- och bygghandling",
         "tags": ["Bostäder"],
-        "header_image": "../images/HeaderP6.jpg"
+        "header_image": "../images/HeaderP3.jpg"
       },
       {
         "id": "project4",
@@ -33,7 +33,7 @@
         "role": "Modellansvarig, medarbetare",
         "info": "Påbyggnad av befintlig byggnad med skola och kontorslokaler. Bygghandling.",
         "tags": ["Skola", "Kontor"],
-        "header_image": "../images/HeaderP6.jpg"
+        "header_image": "../images/HeaderP4.jpg"
       },
       {
         "id": "project5",
@@ -42,7 +42,7 @@
         "role": "Handläggare",
         "info": "Projektering av bygghandlingar för ombyggnad av kontorslokaler",
         "tags": ["Kontor", "Offentligt"],
-        "header_image": "../images/HeaderP6.jpg"
+        "header_image": "../images/HeaderP5.jpg"
       },
       {
         "id": "project6",
@@ -60,7 +60,7 @@
         "role": "Handläggare",
         "info": "Projektering av bygghandlingar för ombyggnad av Riksarkivets mediakonverteringscenter.",
         "tags": ["Arkiv", "Säkerhet", "Specialfastigheter"],
-        "header_image": "../images/HeaderP6.jpg"
+        "header_image": "../images/HeaderP7.jpg"
       }
   ]
   
