@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Runebjörk | CV</title>
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        #cv-frame {
-            width: 100%;
-            height: 100vh;
-            /* Adjust height as necessary */
-            border: none;
-        }
-    </style>
+    <script src="../js/theme.js"></script>
 </head>
 
 <body>
+    <header class="main-header">
+        <h1><a href="../index.html">DANIEL RUNEBJÖRK</a></h1>
+        <p class="subtitle">CV</p>
+    </header>
+
     <div id="cv-container">
-        <iframe src="../documents/CV_daniel_runebjork_2023_simple.pdf" id="cv-frame" style="width:100%; height:100vh;"
+        <iframe src="../documents/CV_daniel_runebjork_2023_simple.pdf" id="cv-frame" title="CV – Daniel Runebjörk"
             frameborder="0"></iframe>
-        <p>If the CV does not display correctly, you can <a href="../documents/CV_daniel_runebjork_2023_simple.pdf"
-                download="DanielRunebjörk_2023_CV.pdf">download the CV here</a>.</p>
+        <p>Om CV:t inte visas korrekt kan du <a href="../documents/CV_daniel_runebjork_2023_simple.pdf"
+                download="DanielRunebjörk_2023_CV.pdf">ladda ner det här</a>.</p>
     </div>
+
+    <section id="navigation-container">
+        <div id="navigation">
+            <a href="../index.html">Hem</a>
+            <a href="projects.html">Projekt</a>
+            <a href="cv.html">CV</a>
+            <a href="https://www.linkedin.com/in/daniel-runebj%C3%B6rk-38ab56157/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a class="nav-external" href="https://xn--grnslandet-r5a.se/" target="_blank" rel="noopener noreferrer">
+                <span>Gränslandet</span>
+                <span class="nav-arrow" aria-hidden="true">↗</span>
+            </a>
+        </div>
+    </section>
 </body>
 
 </html>

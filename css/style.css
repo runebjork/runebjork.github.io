@@ -1,248 +1,420 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-/* Apply a universal box-sizing rule */
-
+/* ============================
+   RESET & GLOBAL SETTINGS
+   ============================ */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Style of generic body and section elements */
+html {
+  scroll-behavior: smooth;
+}
 
+/* ============================
+   FONT: Amatic SC
+   ============================ */
+@font-face {
+  font-family: "Amatic SC";
+  src: url("../assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url("../assets/fonts/AmaticSC-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================
+   THEME VARIABLES
+   ============================ */
+:root {
+  --bg-light: #fafafa;
+  --text-light: #111;
+  --card-light: #fff;
+  --shadow-light: rgba(0, 0, 0, 0.2);
+
+  --bg-dark: #111;
+  --text-dark: #eee;
+  --card-dark: #1a1a1a;
+  --shadow-dark: rgba(255, 255, 255, 0.05);
+
+  /* Fallbacks, so the page still renders before the theme script runs */
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --card-bg: var(--card-light);
+  --shadow: var(--shadow-light);
+}
+
+html[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --card-bg: var(--card-light);
+  --shadow: var(--shadow-light);
+}
+
+html[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --card-bg: var(--card-dark);
+  --shadow: var(--shadow-dark);
+}
+
+/* ============================
+   BODY
+   ============================ */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-    padding: 20px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f3f3f3;
+  font-family: "Courier New", monospace;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s, color 0.4s;
+  padding: 2rem;
+  position: relative;
 }
 
-section {
-    padding: 0px;
-    margin: 0px;
+a {
+  color: inherit;
 }
 
+/* ============================
+   HEADER
+   ============================ */
 .main-header {
-    padding: 20px;
-    margin: 0px;
-    text-align: center;
-    color:#555;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-/* Style the profile section */
-
-#profile-section {
-    padding: 20px;
-    text-align: center;
+.main-header h1 {
+  font-family: "Amatic SC", "Courier New", monospace;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
-#profile-section h1 {
-    margin: 0px;
-    color: #555;
+.main-header h1 a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Style the visulization section */
+.main-header .subtitle {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  opacity: 0.8;
+  letter-spacing: 0.05rem;
+}
 
-#visualization-section {
-    padding: 20px;
-    text-align: center;
+/* ============================
+   THEME TOGGLE BUTTON
+   ============================ */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: var(--card-bg);
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px var(--shadow);
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-toggle:hover {
+  transform: translateY(2px);
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+/* ============================
+   CARDS
+   ============================ */
+.infobox,
+.project-info-box,
+.project-details {
+  background: var(--card-bg);
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px var(--shadow);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  word-wrap: break-word;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+/* Project cards are links, so they get the same press-down feedback
+   as the service buttons on gränslandet.se */
+.project-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+
+.project-link:hover .project-info-box,
+.project-link:focus-visible .project-info-box {
+  transform: translateY(3px);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.project-info-box h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.project-details p,
+.project-info-box p {
+  margin-bottom: 0.25rem;
+}
+
+/* ============================
+   SECTIONS
+   ============================ */
+section {
+  margin-bottom: 4rem;
+}
+
+#profile-section,
+#visualization-section,
+#project-section {
+  text-align: center;
 }
 
 #visualization-section h1 {
-    margin: 0;
-    color: #555;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
-/* Style the project section */
-
-#project-section {
-    text-align: center;
-    padding: 20px;
+#visualization-section > p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
 }
 
-#project-section h1 {
-    margin: 0;
-    color: #555;
-}
-
-.project-info-box {
-    background-color: #e0e0e0;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 15px;
-    box-sizing: border-box;
-    word-wrap: break-word;
-}
-
-.project-details {
-    background-color: #e0e0e0;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 15px;
-    box-sizing: border-box;
-    word-wrap: break-word;
-}
-
-#project-header-box {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-#project-header-text {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
-/* Style for navigation buttons */
-
-#navigation-container {
-    display: flex;
-    justify-content: center;
-    /* Center the navigation div */
-    max-width: 960px;
-    /* Max width same as the main content */
-    margin: 0 auto;
-    /* Center the container */
-}
-
-#navigation {
-    display: flex;
-    /* Use flexbox layout */
-    justify-content: center;
-    /* Center the buttons horizontally */
-    flex-wrap: nowrap;
-    /* Prevent the buttons from wrapping */
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-
-#navigation a {
-    background-color: #2a2a2a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
-    /* Reduce the space between buttons if necessary */
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    flex: 1;
-    /* Allow the buttons to grow and fill the available space */
-    min-width: 0;
-    /* Override the default minimum width */
-}
-
-#navigation a:hover {
-    background-color: #606060;
-}
-
-/* Style for infobox and profile */
-
-.profile-info-box {
-    background-color: #e0e0e0;
-    /* Light grey background */
-    width: 960px;
-    margin: 0 auto;
-    /* Center the box */
-    padding: 15px;
-    /* Add some padding inside the box */
-    box-sizing: border-box;
-    /* Include padding in the width */
-    word-wrap: break-word;
-    /* Ensure long words do not overflow */
-}
-
+/* ============================
+   PROFILE
+   ============================ */
 .profile-container {
-    display: flex;
-    align-items: flex-start;
-    background-color: #e0e0e0;
-    margin: 0 auto;
-    padding: 15px;
-    box-sizing: border-box;
-    max-width: 960px;
-    /* Keep the max-width to constrain the container */
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: left;
 }
 
 .profile-picture {
-    flex-shrink: 0;
-    /* Prevent the image from shrinking */
-    height: auto;
-    /* Height is auto to maintain aspect ratio */
-    width: 180px;
-    /* Set the fixed width for the image */
-    margin-right: 15px;
-    /* Space between image and text */
+  flex-shrink: 0;
+  width: 180px;
+  height: auto;
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
 }
 
 .profile-text {
-    flex-grow: 1;
-    max-width: 780px;
-    text-align: left;
-    word-wrap: break-word;
+  flex-grow: 1;
 }
 
-/* Style for webgl container and placeholders */
+.profile-text p {
+  margin-bottom: 0.75rem;
+}
 
-/* Common styles for desktop-placeholder and unity-canvas */
+.profile-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================
+   WEBGL VIEWER & PLACEHOLDERS
+   ============================ */
 #desktop-placeholder,
 #mobile-placeholder,
 #unity-canvas {
-    width: 960px;
-    height: 600px;
-    margin: 0 auto;
-    background-color: #2a2a2a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: min(960px, 100%);
+  height: 600px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px var(--shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Hidden until the loader script swaps them in — keep this after the
+   block above so it still wins. */
 #unity-canvas,
 #mobile-placeholder {
-    display: none;
-} 
-
-.placeholder-text {
-    text-align: center;
-    color: white;
-    font-size: 20px;
+  display: none;
 }
 
+#desktop-placeholder:hover {
+  transform: translateY(3px);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.placeholder-text {
+  text-align: center;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+/* ============================
+   PROJECT HEADER IMAGE
+   ============================ */
+#project-header-box {
+  position: relative;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 3rem;
+}
+
+#project-header img {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+#project-header-box .main-header {
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+#project-header-box .main-header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+/* ============================
+   NAVIGATION PILLS
+   ============================ */
+#navigation-container {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+#navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card-bg);
+  border: 2px solid var(--text);
+  border-radius: 999px;
+  box-shadow: 0 4px 8px var(--shadow);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+#navigation a:hover,
+#navigation a:focus-visible {
+  transform: translateY(3px);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* The link back to the company site */
+.nav-external .nav-arrow {
+  opacity: 0.7;
+}
+
+/* ============================
+   CV PAGE
+   ============================ */
+#cv-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#cv-frame {
+  width: 100%;
+  height: 80vh;
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px var(--shadow);
+  background: var(--card-bg);
+}
+
+#cv-container p {
+  margin-top: 1rem;
+}
+
+/* ============================
+   MOBILE
+   ============================ */
 @media screen and (max-width: 600px) {
-    .profile-container,
-    .project-info-box,
-    .profile-info-box,
-    #mobile-placeholder {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 20px;
-    }
+  body {
+    padding: 1rem;
+  }
 
-    .profile-picture {
-        width: 100%;
-        margin: 0 auto 10px;
-        padding: 15;
-    }
+  .main-header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
+  }
 
-    .profile-text {
-        width: 100%;
-    }
+  #project-header-box .main-header h1 {
+    font-size: 2.2rem;
+  }
 
-    #navigation a {
-        padding: 10px 10px;
-        font-size: 14px;
-    }
+  .infobox,
+  .project-info-box,
+  .project-details {
+    padding: 1.25rem;
+  }
 
-    #desktop-placeholder {
-        max-height: 300px;
-    }
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-picture {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  #desktop-placeholder,
+  #mobile-placeholder,
+  #unity-canvas {
+    height: 300px;
+  }
+
+  #navigation a {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+  }
 }
