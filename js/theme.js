@@ -33,8 +33,15 @@
     setTheme(prefersDark ? "dark" : "light");
   }
 
-  // Add the toggle button once the body exists.
+  // Add the toggle button once the body exists. Pages that opt out with
+  // data-theme-toggle="off" still get the theme, just no button — the
+  // project pages open with a full-bleed header image the button would
+  // sit on top of.
   document.addEventListener("DOMContentLoaded", function () {
+    if (document.body.dataset.themeToggle === "off") {
+      return;
+    }
+
     const btn = document.createElement("button");
     btn.id = "theme-toggle";
     btn.setAttribute("aria-label", "Växla mellan mörkt och ljust läge");

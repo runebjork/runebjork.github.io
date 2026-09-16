@@ -46,6 +46,11 @@ html {
   --card-dark: #1a1a1a;
   --shadow-dark: rgba(255, 255, 255, 0.05);
 
+  /* Corner radius: the content frames are large, so they carry a
+     correspondingly generous radius. */
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+
   /* Fallbacks, so the page still renders before the theme script runs */
   --bg: var(--bg-light);
   --text: var(--text-light);
@@ -149,7 +154,7 @@ a {
 .project-details {
   background: var(--card-bg);
   border: 2px solid var(--text);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 8px var(--shadow);
   max-width: 960px;
   margin: 0 auto;
@@ -224,7 +229,7 @@ section {
   width: 180px;
   height: auto;
   border: 2px solid var(--text);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
 }
 
 .profile-text {
@@ -250,7 +255,7 @@ section {
   margin: 0 auto;
   background-color: var(--card-bg);
   border: 2px solid var(--text);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 8px var(--shadow);
   display: flex;
   justify-content: center;
@@ -290,7 +295,7 @@ section {
   width: 100%;
   height: auto;
   border: 2px solid var(--text);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 8px var(--shadow);
 }
 
@@ -364,7 +369,7 @@ section {
   width: 100%;
   height: 80vh;
   border: 2px solid var(--text);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 8px var(--shadow);
   background: var(--card-bg);
 }
